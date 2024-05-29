@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.0.1"
+__version__ = "1.15.0"
 
 # import apis into sdk package
 from ahvac.api.auth_api import AuthApi
