@@ -1,0 +1,46 @@
+# AppRoleWriteRoleRequest
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**bind_secret_id** | **bool** | Impose secret_id to be presented when logging in using this role. Defaults to &#39;true&#39;. | [optional] [default to True]
+**bound_cidr_list** | **List[str]** | Use \&quot;secret_id_bound_cidrs\&quot; instead. | [optional] 
+**local_secret_ids** | **bool** | If set, the secret IDs generated using this role will be cluster local. This can only be set during role creation and once set, it can&#39;t be reset later. | [optional] 
+**period** | **str** | Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used. | [optional] 
+**policies** | **List[str]** | Use \&quot;token_policies\&quot; instead. If this and \&quot;token_policies\&quot; are both specified, only \&quot;token_policies\&quot; will be used. | [optional] 
+**role_id** | **str** | Identifier of the role. Defaults to a UUID. | [optional] 
+**secret_id_bound_cidrs** | **List[str]** | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can perform the login operation. | [optional] 
+**secret_id_num_uses** | **int** | Number of times a SecretID can access the role, after which the SecretID will expire. Defaults to 0 meaning that the the secret_id is of unlimited use. | [optional] 
+**secret_id_ttl** | **str** | Duration in seconds after which the issued SecretID should expire. Defaults to 0, meaning no expiration. | [optional] 
+**token_bound_cidrs** | **List[str]** | Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token. | [optional] 
+**token_explicit_max_ttl** | **str** | If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed. | [optional] 
+**token_max_ttl** | **str** | The maximum lifetime of the generated token | [optional] 
+**token_no_default_policy** | **bool** | If true, the &#39;default&#39; policy will not automatically be added to generated tokens | [optional] 
+**token_num_uses** | **int** | The maximum number of times a token may be used, a value of zero means unlimited | [optional] 
+**token_period** | **str** | If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;). | [optional] 
+**token_policies** | **List[str]** | Comma-separated list of policies | [optional] 
+**token_ttl** | **str** | The initial ttl of the token to generate | [optional] 
+**token_type** | **str** | The type of token to generate, service or batch | [optional] [default to 'default-service']
+
+## Example
+
+```python
+from ahvac.models.app_role_write_role_request import AppRoleWriteRoleRequest
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of AppRoleWriteRoleRequest from a JSON string
+app_role_write_role_request_instance = AppRoleWriteRoleRequest.from_json(json)
+# print the JSON string representation of the object
+print(AppRoleWriteRoleRequest.to_json())
+
+# convert the object into a dict
+app_role_write_role_request_dict = app_role_write_role_request_instance.to_dict()
+# create an instance of AppRoleWriteRoleRequest from a dict
+app_role_write_role_request_from_dict = AppRoleWriteRoleRequest.from_dict(app_role_write_role_request_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

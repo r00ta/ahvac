@@ -1,0 +1,38 @@
+# RekeyAttemptReadProgressResponse
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**backup** | **bool** |  | [optional] 
+**n** | **int** |  | [optional] 
+**nounce** | **str** |  | [optional] 
+**pgp_fingerprints** | **List[str]** |  | [optional] 
+**progress** | **int** |  | [optional] 
+**required** | **int** |  | [optional] 
+**started** | **str** |  | [optional] 
+**t** | **int** |  | [optional] 
+**verification_nonce** | **str** |  | [optional] 
+**verification_required** | **bool** |  | [optional] 
+
+## Example
+
+```python
+from ahvac.models.rekey_attempt_read_progress_response import RekeyAttemptReadProgressResponse
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of RekeyAttemptReadProgressResponse from a JSON string
+rekey_attempt_read_progress_response_instance = RekeyAttemptReadProgressResponse.from_json(json)
+# print the JSON string representation of the object
+print(RekeyAttemptReadProgressResponse.to_json())
+
+# convert the object into a dict
+rekey_attempt_read_progress_response_dict = rekey_attempt_read_progress_response_instance.to_dict()
+# create an instance of RekeyAttemptReadProgressResponse from a dict
+rekey_attempt_read_progress_response_from_dict = RekeyAttemptReadProgressResponse.from_dict(rekey_attempt_read_progress_response_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
