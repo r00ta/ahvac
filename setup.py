@@ -21,7 +21,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "ahvac"
-VERSION = "0.0.1"
+VERSION = "1.15.0"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 2.1.0",
@@ -35,18 +35,18 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="HashiCorp Vault API",
-    author="OpenAPI Generator community",
-    author_email="team@openapitools.org",
-    url="",
+    description="HashiCorp Vault Python async client",
+    author="Jacopo Rota",
+    author_email="jacopo.r00ta@gmail.com",
+    url="https://github.com/r00ta/ahvac",
     keywords=["OpenAPI", "OpenAPI-Generator", "HashiCorp Vault API"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
-    license="Mozilla Public License 2.0",
+    license="Apache License Version 2.0",
     long_description_content_type='text/markdown',
     long_description="""\
-    HTTP API that gives you full access to Vault. All API routes are prefixed with &#x60;/v1/&#x60;.
+    An async python package to make HTTP calls to Hashcorp vault..
     """,  # noqa: E501
     package_data={"ahvac": ["py.typed"]},
 )
